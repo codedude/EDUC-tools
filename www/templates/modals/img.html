@@ -1,0 +1,14 @@
+<ion-modal-view class="modalFS">
+    <ion-header-bar class="bar-positive menu-content">
+        <h1 class="title"><san d="data.nom"></san></h1>
+        <button class="my_icon-larger my_icon-adjust button-clear button"
+        ng-click="closeImg()">
+            <i class="button-icon ion-android-close dark"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content>
+        <figure class="my_tp-imageFS" >
+            <img ng-src="{{modal.data.src}}" alt="Image {{modal.data.nom}}" />
+        </figure>
+    </ion-content>
+  </ion-modal-view>

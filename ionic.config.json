@@ -1,0 +1,13 @@
+{
+  "name": "EDUC-tools",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "babel-js",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/EDUC-tools/**/*"
+  ]
+}

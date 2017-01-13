@@ -1,0 +1,368 @@
+/*
+This file is part of EDUC-tools.
+
+    EDUC-tools is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    EDUC-tools is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with EDUC-tools.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+.selectable * {
+    -webkit-user-select: text !important;
+     -moz-user-select: text !important;
+      -ms-user-select: text !important;
+          user-select: text !important;
+}
+
+.my-hr {
+  width: 66%;
+  margin: 4em auto;
+}
+
+.modalFS{
+  top: 0 ;
+  bottom: 0 ;
+  left: 0 ;
+  right: 0 ;
+  width: 100% ;
+}
+
+.spinner {
+  display: block;
+  width: 64px;
+  margin: 3em auto;
+  svg {
+    width: 64px;
+    height: 64px;
+    stroke: #444;
+    fill: #444;
+  }
+}
+
+/*
+  Affichage de la ressource
+  div parente : my_tp
+  modules : class commençant par my_tp-
+*/
+.my_tp {
+
+}
+#zoneTp {
+  margin: 2.5em 0 12.5em 0;
+}
+
+
+.my_tp-titre {
+  margin-left: 1em;
+  margin-bottom: 2em;
+
+  h3 {
+
+  }
+}
+.titre-grand {
+
+}
+.titre-petit {
+    font-size: 80%;
+}
+
+.my_tp-texte {
+  text-indent: 2em;
+  margin-bottom: 2em;
+}
+.my_tp-lien {
+
+}
+
+.my_tp-separ {
+  background: #444;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.my_tp-separ-space {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: none;
+}
+.my_tp-separ-mineure {
+  height: 1px;
+  width: 33%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.my_tp-separ-majeure {
+  height: 3px;
+  width: 66%;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+.my_tp-image {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  figcaption {
+    p {
+      margin: 0;
+      font-size: 0.9em;
+      font-variant: small-caps;
+    }
+  }
+}
+.my_tp-imageFS {
+  text-align: center;
+  margin: 0;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.my_tp-video {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  .video_select {
+    max-width: 90%;
+    height: auto;
+  }
+
+  figcaption {
+    p {
+      margin: 0;
+      font-size: 0.9em;
+      font-variant: small-caps;
+    }
+  }
+}
+.my_tp-son {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  .audio_select {
+    max-width: 60%;
+    height: auto;
+  }
+
+  figcaption {
+    p {
+      margin: 0;
+      font-size: 0.9em;
+      font-variant: small-caps;
+    }
+  }
+}
+.my_tp-objet {
+
+}
+.my_tp-html {
+
+}
+
+/*
+  Class utils
+*/
+.my_important {
+  font-size: 120%;
+}
+.my_underline {
+  text-decoration: underline;
+}
+.my_butt-center {
+  display: block;
+  margin: auto;
+}
+.my_textarea-bug {
+  width: 90%;
+  margin: auto;
+  overflow:scroll;
+  resize:none;
+  position:relative;
+  -moz-user-select: text !important;
+  -webkit-user-select: text !important;
+  -ms-user-select: text !important;
+}
+
+
+
+/*
+
+*/
+.my_img-projet {
+  float: left;
+  margin: 6px 12px;
+
+  max-width: 60%;
+  height: auto;
+}
+
+.my_card-body {
+  min-height: 200px;
+}
+
+.my_larger {
+    font-size: x-large !important;
+}
+.my_middle {
+    vertical-align: middle !important;
+}
+
+.my_card-info {
+    position: absolute;
+    top: 3px;right: 2px;
+    padding: 0;margin: 3px;
+}
+
+.my_i-larger {
+  font-size: 150% !important;
+  max-height: 50px !important;
+  max-width: 50px !important;
+}
+
+.my_i-avatar {
+  font-size: 36px !important;
+}
+.my_icon-larger {
+  height: 52px !important;
+  width: 52px !important;
+  max-height: 75px !important;
+  max-width: 75px !important;
+
+  > i {
+    font-size: 40px !important;
+  }
+}
+.my_opt-butt {
+  > i {
+    font-size: 26px !important;
+    margin-left: 6px;
+  }
+}
+.my_check-adjust {
+  position: absolute;
+}
+.my_icon-adjust {
+  top: -3px !important;
+}
+.my_img-header {
+  padding: 8px;
+
+  img {
+    max-width: 75%;
+    height: auto;
+  }
+}
+
+.my_slide-box {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+
+.my_text-in-avatar {
+  margin-right: 50px;
+}
+
+
+/*
+  Formattage du texte tp
+*/
+.tp_bold {
+    font-weight: bold;
+}
+.tp_italic {
+    font-style: italic;
+}
+.tp_underline {
+    text-decoration: underline;
+}
+.tp_bigger {
+    font-size: 120%;
+}
+.tp_smaller {
+    font-size: 80%;
+}
+.tp_sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+.tp_sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+.tp_red {
+    color: #da4234;
+}
+.tp_green {
+    color: #33cd5f;
+}
+.tp_blue {
+    color: #387ef5;
+}
+.tp_item {
+    display: list-item;
+    margin-left: 2em;
+}
+.tp_uitem {
+    display: list-item;
+    list-style-type: none;
+    margin-left: 2em;
+}
+
+/*
+  Note tp
+*/
+.my_tp-note {
+  margin: 4em 3em 2em;
+}
+
+.my_tp-note p{
+    padding: 4px;
+    text-indent: 0.5em;
+    margin-left: 3em;
+    border-bottom: 1px solid;
+}
+.my_tp-note-tip p{
+    border-color: #33cd5f !important;
+}
+.my_tp-note-info p{
+    border-color: #387ef5 !important;
+}
+.my_tp-note-warning p {
+    border-color: #da4234 !important;
+}
+
+.my_tp-note > span{
+    float: left;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+.my_tp-note-tip > span {
+    background-image: url('../img/tip.png');
+    border-color: #33cd5f !important;
+}
+.my_tp-note-info > span {
+    background-image: url('../img/info.png');
+    border-color: #387ef5 !important;
+}
+.my_tp-note-warning > span {
+    background-image: url('../img/warning.png');
+    border-color: #da4234 !important;
+}

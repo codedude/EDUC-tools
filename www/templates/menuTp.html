@@ -1,0 +1,79 @@
+<!--
+This file is part of EDUC-tools.
+
+    EDUC-tools is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    EDUC-tools is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with EDUC-tools.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-balanced menu-content">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon"
+          menu-toggle="right">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-nav-view name="menuContent">
+    </ion-nav-view>
+
+  </ion-side-menu-content>
+
+  <ion-side-menu side="right">
+    <ion-header-bar class="bar-dark menu-content">
+      <h1 class="title">Menu</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item class="item item-divider" ng-show="showCours">
+          <span class="my_larger my_middle energized ion-university"></span>
+          Cours
+        </ion-item>
+
+        <ion-item class="item item-text-wrap" ng-show="showMenuErreur">
+          <span class="assertive">{{menuErreur}}</span>
+        </ion-item>
+
+        <ion-item class="item" menu-close ng-click="selectCourse($index)"
+        ui-sref="tp.page({id: $index})" ui-sref-active="active"
+        ng-show="showCours && !showMenuErreur"
+        ng-repeat="cours in courses track by cours.numero">
+          <san d="cours.nom"></san>
+        </ion-item>
+
+        <ion-item class="item item-divider">
+        </ion-item>
+
+        <ion-item menu-close ng-click="goChapitre()">
+          <span class="my_larger my_middle assertive ion-android-list"></span>
+          Retour aux chapitres
+        </ion-item>
+
+        <ion-item class="item item-divider">
+        </ion-item>
+
+        <ion-item ng-click="goApropos()">
+          <span class="my_larger my_middle ion-information-circled"></span>
+          A propos
+        </ion-item>
+        <ion-item menu-close ng-click="goHome()" class="text-center">
+          <span class="my_larger my_middle positive ion-home"></span>
+          Home
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

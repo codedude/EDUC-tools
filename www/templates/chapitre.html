@@ -1,0 +1,55 @@
+<!--
+This file is part of EDUC-tools.
+
+    EDUC-tools is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    EDUC-tools is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with EDUC-tools.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<ion-view>
+    <ion-nav-title>{{::titre}}</ion-nav-title>
+
+    <ion-nav-bar class="bar-balanced menu-content">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content>
+        <div class="padding" ng-show="showError">
+            <p>
+                Des erreurs sont survenues pendant le chargement des chapitres :
+            </p>
+            <ul class="assertive">
+                <li ng-repeat="err in initError track by $index">
+                    {{err}}
+                </li>
+            </ul>
+        </div>
+
+        <div class="padding" ng-show="!showChapitre">
+            Aucun chapitre présent !
+        </div>
+        <ion-list can-swipe="true" ng-show="showChapitre">
+            <ion-item class="item-avatar"
+            ng-repeat="chapitre in listeChapitres
+            track by $index" ng-click="selectChapitre($event, $index)">
+                <img ng-src="{{::chapitre.image}}" alt=""/>
+                <h2><san d="::chapitre.nom"></san></h2>
+                <p><san d="::chapitre.description"></san></p>
+
+                <ion-option-button class="button-dark my_opt-butt"
+                       ng-click="showDes($event, $index)">
+                    <i class="ion-android-open light"></i>
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

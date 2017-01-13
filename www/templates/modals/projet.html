@@ -1,0 +1,65 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-positive menu-content">
+        <h1 class="title"><san d="dataModal.nom"></san></h1>
+        <button class="my_icon-larger my_icon-adjust button-clear button"
+        ng-click="closeModal()">
+            <i class="button-icon ion-android-close dark"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content scroll="true" class="selectable" overflow-scroll="true">
+        <div class="list">
+            <div class="item item-text-wrap">
+                <h2 class="header">Contacts</h2>
+
+                <div class="list card" ng-repeat="contact in dataModal.contacts
+                | orderBy: nom track by $index">
+
+                  <div class="item item-avatar">
+                    <i ng-class="{'balanced': contact.partner}" class="item-image icon my_i-avatar ion-android-contact"></i>
+                    <h2 ng-bind-html="">{{contact.nom}}</h2>
+                    <p>Structure : <san d="contact.struct"></san></p>
+                    <p>Lieu : <san d="contact.lieu"></san></p>
+                    <p>Site web : <san d="contact.url"></san></p>
+                    <p>Courriel : <san d="contact.email"></san></p>
+                    <p>Téléphone : <san d="contact.phone"></san></p>
+                  </div>
+
+                  <div class="item item-body">
+                    <p><san d="contact.description"></san></p>
+                  </div>
+
+                </div>
+            </div>
+
+            <div class="item item-text-wrap">
+                <h2 class="header">Sources</h2>
+                <div class="list card" ng-repeat="source in dataModal.sources
+                | orderBy: nom track by $index">
+
+                  <div class="item item-avatar">
+                    <img ng-src="{{source.src}}" />
+                    <h2><san d="source.nom"></san></h2>
+                    <p>Ressources : <san d="source.ressource"></san></p>
+                  </div>
+
+                  <div class="item item-body">
+                    <p><san d="source.description"></san></p>
+                  </div>
+
+                </div>
+            </div>
+
+            <div class="item item-text-wrap">
+                <h2 class="header">Auteurs</h2>
+                    <div ng-repeat="auteur in dataModal.auteurs |
+                    orderBy: nom track by $index">
+                        <p>
+                            <san d="auteur.nom"></san>
+                            <san d="auteur.email"></san>
+                            <san d="auteur.description"></san>
+                        </p>
+                    </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

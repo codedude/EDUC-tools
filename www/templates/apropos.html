@@ -1,0 +1,61 @@
+<!--
+This file is part of EDUC-tools.
+
+    EDUC-tools is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    EDUC-tools is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with EDUC-tools.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<ion-view cache-view="true">
+    <ion-nav-bar class="bar-dark menu-content">
+        <my-back-button my-click="goBack()"></my-back-button>
+        <ion-nav-title>
+            <i class="ion-information-circled"></i>
+            A propos
+        </ion-nav-title>
+    </ion-nav-bar>
+
+    <ion-content class="selectable" overflow-scroll="true">
+        <ul class="list">
+            <li class="item item-text-wrap">
+                <h2 class="header">Contact</h2>
+                <p>
+                    <i class="button-icon my_i-larger ion-social-github"></i>
+                    https://github.com/codedude/EDUC-tools
+                </p>
+                <br \>
+                <p>
+                    <i class="button-icon my_i-larger ion-email"></i>
+                        Développeur : codedude.app@gmail.com
+                </p>
+                <p>
+                    <button class="button button-stable" ng-click="openBug()">
+                        <i class="button-icon my_i-larger ion-bug"></i>
+                        Rapport de bug
+                    </button>
+                </p>
+            </li>
+
+            <li class="item item-text-wrap">
+                <h2 class="header">Licence</h2>
+                <p>
+                    L'application EDUC-tools est distribuée sous la licence GNU GPL v3
+                </p>
+            </li>
+            <li class="item item-text-wrap">
+                <h2 class="header">Version</h2>
+                <p>
+                    Version actuelle : {{::version}} du {{::date}}
+                </p>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,55 @@
+/*
+This file is part of EDUC-tools.
+
+    EDUC-tools is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    EDUC-tools is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with EDUC-togulpStartupTasks doesn't workols.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/**********************
+    Modification de ionic
+**********************/
+
+/* Couleurs */
+$balanced:                        #30ba58 !default;
+$assertive:                       #da4234 !default;
+$base-background-color:           #f5f5f5 !default;
+$modal-bg-color:                  #f5f5f5 !default;
+
+/* Taille de la bar du haut */
+/*
+$bar-height:                      60px !default;
+$bar-title-font-size:             20px !default;
+$bar-padding-portrait:            10px !default;
+$bar-padding-landscape:           10px !default;
+*/
+
+/* Affichage du menu */
+$menu-animation-speed:            250ms !default;
+
+/* Page transition */
+/* Nouvelles variables */
+$nav-swipe-fast:                  180ms; /* 50 default */
+$nav-swipe-slow:                  230ms; /* 160 default */
+
+/* Item */
+$item-avatar-width:               50px !default;
+$item-avatar-height:              46px !default;
+$item-avatar-border-radius:       50% !default;
+
+/*
+$button-large-icon-size:          40px !default;
+$button-small-height:             40px !default;
+*/
+
+/* Forward transition (bout noir par défaut) */
+$ios-transition-container-bg-color:    #fff !default;

@@ -1,0 +1,105 @@
+<!--
+This file is part of EDUC-tools.
+
+    EDUC-tools is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    EDUC-tools is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with EDUC-tools.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<ion-view>
+    <ion-nav-title>{{::titre}}</ion-nav-title>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-information-circled"
+            ng-click="goApropos()">
+        </button>
+    </ion-nav-buttons>
+
+
+    <ion-content class="selectable" overflow-scroll="true">
+        <div class="padding">
+            <h2><i class="button-icon ion-ribbon-b energized"></i>Bienvenue</h2>
+            <p>
+                Le dossier {{::dirRoot}} contenant vos projets doit se trouver à la
+                racine de votre appareil, à côté de Mes Documents ou
+                Téléchargement par exemple.
+            </p>
+        </div>
+
+        <div class="padding card" ng-show="showInitError">
+            Des erreurs sont survenues pendant le chargement des projets :
+            <ul class="assertive">
+                <li ng-repeat="err in initError track by $index">
+                    {{err}}
+                </li>
+            </ul>
+        </div>
+
+        <ion-spinner ng-show="!showProjet && showSpinner && !showError"
+        icon="android" class="spinner">
+        </ion-spinner>
+
+        <ion-slide-box class="my_slide-box" ng-show="showProjet && !showError">
+            <ion-slide ng-repeat="projet in projets
+            track by projet.numero" ng-click="selectProjet($event, $index)">
+                <div class="list card">
+                  <div class="item item-avatar">
+                    <img src="img/icon-projet.png" alt=""/>
+                    <h2><san d="::projet.nom"></san></h2>
+                    <p class="my_text-in-avatar">
+                        Auteurs : <san d="::projet.auteurs.team"></san>
+                    </p>
+                    <button id="DoNotFire" class="my_card-info my_icon-larger
+                    button-clear button"
+                    ng-click="showProjetModal($event, $index)">
+                        <i class="button-icon ion-android-open dark"></i>
+                    </button>
+                  </div>
+
+                  <div class="my_card-body item item-body">
+                    <p>
+                        <img class="my_img-projet" ng-src="{{::projet.image}}"
+                        />
+                        <san d="::projet.description"></san>
+                    </p>
+                  </div>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+
+        <div class="padding" ng-show="!showProjet && !showSpinner && !showError">
+            Aucun projet présent !
+        </div>
+        <div class="padding card" ng-show="showError">
+            <p>
+                <i class="button-icon ion-android-warning assertive
+                    my_i-larger"></i>
+                <span class="my_important my_underline">
+                    Une erreur s'est produite
+                </span>
+                lors de la recherche de projets.
+                Voici l'erreur retournée :
+            </p>
+            <p class="assertive my_important">
+                <san d="::scanError"></san>
+            </p>
+            <p>
+                Vérifiez que le dossier {{::dirRoot}} est bien présent à la racine
+                de votre appareil, et qu'il contient des projets valides.<br \>
+                Ensuite, relancez l'application.<br \><br \>
+                Si le problème persiste, merci de contacter le développeur
+                (cf page <a ui-sref="apropos" class="my_important">
+                A propos</a>).
+            </p>
+        </div>
+    </ion-content>
+</ion-view>
